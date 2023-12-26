@@ -1,0 +1,75 @@
+body{
+    background-image: url(../background.jpg);
+}
+.navbar a{
+    color: #ffff;
+    font-size: medium;
+    
+}
+.navbar .navbar-brand{
+    font-size:25px;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+/* ---------login form---------- */
+.form-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    height: 420px;
+    padding: 30px;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px; 
+    backdrop-filter: blur(15px);
+   
+}
+
+h3{
+   
+    text-align: center;
+    font-size: 30px;
+}
+
+.form-floating input{
+    background: transparent;
+}    
+   
+#btn-register{
+    text-decoration: none;
+    color: black;
+  
+}
+
+
+.btn-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 40px;
+    width: 40px;
+    
+}
+
+/* ---------registeration form---------- */
+.form-container2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    height: 500px;
+    padding: 30px;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    
+    backdrop-filter: blur(15px);
+   
+}
+.form-container2 form a{
+    text-decoration: none;
+    color: black;
+  
+}
+
