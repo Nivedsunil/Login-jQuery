@@ -124,31 +124,68 @@
 
    
    <script>
-      $(document).ready(function () {
+       var formContainer2 = document.querySelector('.form-container2'); //register 
+       var formContainer = document.querySelector('.form-container'); // login
+        var commonContainer = document.querySelector('.common-container');
+        var btnShow = document.getElementById('btn-show');
+        var btnRegister = document.getElementById('btn-register');
+        var btnLogin = document.getElementById('btn-login');
+        var btnHide = document.querySelectorAll('.btn-hide');
+
+
+
+        formContainer2.style.display = 'none' // hides register
+
+        btnShow.addEventListener('click',function(){
+            commonContainer.classList.remove('d-none')
+        })
+
+        btnRegister.addEventListener('click' ,function(){
+           formContainer.style.display= 'none';
+           formContainer2.style.display= 'block';
+        })
+
+        btnLogin.addEventListener('click',function(){
+         formContainer2.style.display='none';
+         formContainer.style.display='block';
+        })
+
+        btnHide.forEach(function (button) {
+            button.addEventListener('click', function () {
+                commonContainer.style.display = 'none';
+            });
+         })
+        
+
+
+
+
+      // $(document).ready(function () {
       
-          $('.form-container2').hide(); // hide form-container2
+      //     $('.form-container2').hide(); // hide form-container2
 
-          $('#btn-show').click(function () {
-              $('.common-container').removeClass('d-none');
-          });
+      //     $('#btn-show').click(function () {
+      //         $('.common-container').removeClass('d-none');
+              
+      //     });
 
-          $('#btn-register').click(function () {
-              $('.form-container').fadeOut(300, function () {
-                  $('.form-container2').fadeIn(300);
-              });
-          });
+      //     $('#btn-register').click(function () {
+      //         $('.form-container').fadeOut(300, function () {
+      //             $('.form-container2').fadeIn(300);
+      //         });
+      //     });
 
-          $('#btn-login').click(function () {
-              $('.form-container2').fadeOut(300, function () {
-                  $('.form-container').fadeIn(300);
-              });
-          });
+      //     $('#btn-login').click(function () {
+      //         $('.form-container2').fadeOut(300, function () {
+      //             $('.form-container').fadeIn(300);
+      //         });
+      //     });
 
-          $('.btn-hide').click(function () {
-              $('.common-container').fadeOut(500);
-          });
-          
-      });
+      //     $('.btn-hide').click(function () {
+      //         $('.common-container').fadeOut(500);
+      //     });
+      //       
+      // });
   </script>
 </body>
 

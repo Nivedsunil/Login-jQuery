@@ -1,6 +1,30 @@
-body{
+/* body{
     background-image: url(../background.jpg);
+    
+    background-repeat: no-repeat;
+} */
+body {
+    background-image: url('../background.jpg');
+    background-size:cover;
+   
+    
 }
+@media (max-width: 768px) {
+    body  {
+        background-size: cover ;/* You can adjust this based on your design needs */
+        background-repeat: no-repeat;
+        background-size: 500px 670px;
+        
+       
+        
+    }
+    .navbar {
+        background-color: rgba(128, 128, 128, 0.427);
+        
+        font-size: larger;
+    }
+}
+
 .navbar a{
     color: #ffff;
     font-size: medium;
