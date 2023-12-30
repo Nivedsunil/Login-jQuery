@@ -9,25 +9,12 @@ body {
    
     
 }
-@media (max-width: 768px) {
-    body  {
-        background-size: cover ;/* You can adjust this based on your design needs */
-        background-repeat: no-repeat;
-        background-size: 500px 670px;
-        
-       
-        
-    }
-    .navbar {
-        background-color: rgba(128, 128, 128, 0.427);
-        
-        font-size: larger;
-    }
-}
+
 
 .navbar a{
     color: #ffff;
     font-size: medium;
+    font-weight: 600;
     
 }
 .navbar .navbar-brand{
@@ -35,6 +22,8 @@ body {
     font-weight: 700;
     font-family: sans-serif;
 }
+
+
 /* ---------login form---------- */
 .form-container{
     position: absolute;
@@ -67,6 +56,7 @@ h3{
 }
 
 
+
 .btn-close{
     position: absolute;
     top: 0;
@@ -96,4 +86,32 @@ h3{
     color: black;
   
 }
+.form-floating span {
+    line-height: 62px;
+}
 
+
+@media (max-width: 768px) {
+    body  {
+        background-size: cover ;/* You can adjust this based on your design needs */
+        background-repeat: no-repeat;
+        background-size: 500px 670px;
+        
+       
+        
+    }
+    .form-container{
+ 
+        width: 360px;
+        height: 420px;
+     
+       
+    }
+    .form-container2{
+      
+        width: 360px;
+        height: 500px;
+       
+    }
+    
+}

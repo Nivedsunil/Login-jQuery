@@ -4,10 +4,12 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Login-jQuery</title>
+   <title>Login-page</title>
    <link rel="stylesheet" href="./styles/bootstrap.min.css">
    <link rel="stylesheet" href="./styles/main.css">
+   <script src="https://kit.fontawesome.com/0731786582.js" crossorigin="anonymous"></script>
    <script src="./js/bootstrap.bundle.min.js"></script>
+
    <script src="./js/jquery-3.7.1.js"></script>
 
 </head>
@@ -26,7 +28,7 @@
                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
                <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-               <li><button class="btn btn-outline-light ms-lg-4" id="btn-show" >Login</button></li>
+               <li><button class="btn btn-outline-light ms-lg-2  fw-medium" id="btn-show" >Login</button></li>
                
 
             </ul>
@@ -45,12 +47,14 @@
 
             <form action="">
                <div class="form-floating mt-4">
-                  <input type="email" name="email" class="form-control  opacity-75" placeholder="Enter your Email">
+                  <span class="icon position-absolute  end-0"><i class="fa-solid fa-envelope"></i></span>
+                  <input type="email" name="email" class="form-control bg-transparent border border-0 border-bottom border-dark rounded-0" placeholder="Enter your Email">
                   <label for="" class="form-label">Email</label>
 
                </div>
                <div class="form-floating mt-3">
-                  <input type="password" name="pass" class=" form-control opacity-50" placeholder="Enter your Password">
+                  <span class="icon position-absolute  end-0"><i class="fa-solid fa-lock"></i></span>
+                  <input type="password" name="pass" class="form-control bg-transparent border border-0 border-bottom border-dark rounded-0" placeholder="Enter your Password">
                   <label for="" class="form-label">Password</label>
 
                </div>
@@ -72,7 +76,7 @@
                   <input type="submit" class="btn btn-dark  form-control form-control-sm " value="Login">
                </div>
                <div class="mt-3 text-center">
-                  <p>Don't have an account ?<a href="#" id="btn-register">Register</a></p>
+                  <p>Don't have an account? <a class="fw-medium" href="#" id="btn-register">Register</a></p>
                </div>
 
 
@@ -81,7 +85,7 @@
       </div>
       <div class="form-container2" >
 
-         <button class="btn btn-close btn-hide"></button>
+         <button class="btn btn-close  btn-hide"></button>
          <div class="Register">
 
 
@@ -89,21 +93,24 @@
 
             <form action="">
                <div class="form-floating mt-4">
-                  <input type="text" name="uname" class="form-control opacity-50" placeholder="Enter your Username">
+                  <span class="icon position-absolute  end-0"><i class="fa-solid fa-user"></i></span>
+                  <input type="text" name="uname" class="form-control bg-transparent border border-0 border-bottom border-dark rounded-0" placeholder="Enter your Username">
                   <label for="" class="form-label">Username</label>
 
                </div>
-               <div class="form-floating mt-3">
-                  <input type="email" name="email" class="form-control opacity-50" placeholder="Enter your Email">
+               <div class="form-floating mt-2">
+                  <span class="icon position-absolute  end-0"><i class="fa-solid fa-envelope"></i></span>
+                  <input type="email" name="email" class="form-control mt-2 bg-transparent border border-0 border-bottom border-dark rounded-0" placeholder="Enter your Email">
                   <label for="" class="form-label">Email</label>
 
                </div>
-               <div class="form-floating mt-3">
-                  <input type="password" name="pass" class=" form-control opacity-50" placeholder="Enter your Password">
+               <div class="form-floating mt-2">
+                  <span class="icon position-absolute  end-0"><i class="fa-solid fa-lock"></i></span>
+                  <input type="password" name="pass" class="form-control bg-transparent border border-0 border-bottom border-dark rounded-0" placeholder="Enter your Password">
                   <label for="" class="form-label">Password</label>
 
                </div>
-               <div class="mt-2 form-check justify-content-evenly">
+               <div class="mt-3 form-check justify-content-evenly">
                   <input type="checkbox" name="" class="form-check-input">
                   <label for="" class="form-check-label">i agreed to the terms & conditions</label>
                   
@@ -112,7 +119,7 @@
                   <input type="submit" class="btn btn-dark  form-control " value="Register">
                </div>
                <div class="mt-3 text-center">
-                  <p>Already have an account ?<a href="#" id="btn-login">Login</a></p>
+                  <p>Already have an account? <a class="fw-medium" href="#" id="btn-login">Login</a></p>
                </div>
 
 
@@ -135,9 +142,10 @@
 
 
         formContainer2.style.display = 'none' // hides register
+        
 
         btnShow.addEventListener('click',function(){
-            commonContainer.classList.remove('d-none')
+            commonContainer.classList.toggle('d-none')
         })
 
         btnRegister.addEventListener('click' ,function(){
@@ -146,15 +154,17 @@
         })
 
         btnLogin.addEventListener('click',function(){
+        
          formContainer2.style.display='none';
          formContainer.style.display='block';
         })
 
         btnHide.forEach(function (button) {
             button.addEventListener('click', function () {
-                commonContainer.style.display = 'none';
+                commonContainer.classList.add('d-none'); 
             });
          })
+        
         
 
 
@@ -164,10 +174,10 @@
       
       //     $('.form-container2').hide(); // hide form-container2
 
-      //     $('#btn-show').click(function () {
-      //         $('.common-container').removeClass('d-none');
+         //  $('#btn-show').click(function () {
+         //      $('.common-container').toggleClass('d-none');
               
-      //     });
+         //  });
 
       //     $('#btn-register').click(function () {
       //         $('.form-container').fadeOut(300, function () {
@@ -181,10 +191,10 @@
       //         });
       //     });
 
-      //     $('.btn-hide').click(function () {
-      //         $('.common-container').fadeOut(500);
-      //     });
-      //       
+         //  $('.btn-hide').click(function () {
+         //      $('.common-container').addClass('d-none');
+         //  });
+            
       // });
   </script>
 </body>
